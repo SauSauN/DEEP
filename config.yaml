@@ -1,0 +1,40 @@
+# config.yaml
+
+paths:
+  data_root:        "C:/Users/nelly/Desktop/DEEP/DATAFLAC"    # EN FONCTION DE PC FAUT MODIFIER ICI
+  protocols_dir:    "ASVspoof2019_LA_cm_protocols"
+  train_dir:        "ASVspoof2019_LA_train/flac"
+  dev_dir:          "ASVspoof2019_LA_dev/flac"
+  checkpoints_dir:  "checkpoints"
+
+audio:
+  target_length_seconds: 4
+  sample_rate:           16000
+  mono:                  true
+
+lfcc:
+  n_filters:  60
+  window_ms:  25
+  hop_ms:     10
+
+aasist:
+  sinc_filters:    64
+  graph_nodes:     128
+  attention_heads: 4
+  embedding_dim:   160
+
+fusion:
+  lfcc_dim:    60
+  aasist_dim:  160
+  hidden_dim:  128
+  dropout:     0.3
+
+training:
+  batch_size:              8
+  learning_rate:           0.0001
+  epochs:                  10
+  early_stopping_patience: 10
+  device:                  "cpu"
+
+evaluation:
+  thresholds: 100

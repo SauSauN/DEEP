@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Caches and environments
+.pytest_cache/
+.ipynb_checkpoints/
+venv/
+.venv/
+env/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS specific files
+Thumbs.db
+db.properties
+desktop.ini
+.DS_Store
+
+# Distribution / packaged files
+.dist/
+build/
+dist/
+*.egg-info/
